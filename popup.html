@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<style type="text/css">
+body {
+	width: 400px;
+	font-size: 80%;
+	margin: 0;
+	padding: 0;
+}
+.desc {
+	border: solid 1px #3355f1;
+	background: #0C60AC;
+	margin: 3px;
+	padding: 5px;
+	text-align: center;
+	color: #fff;
+}
+#save {
+	background: rgb(28, 184, 65);
+	color: white;
+	border-radius: 4px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	border: 0 rgba(0,0,0,0);
+	margin-left: 5px;
+	padding: .3em 1.5em;
+	vertical-align: baseline;
+	font: -webkit-small-control;
+	font-size: 100%;
+	text-transform: capitalize;
+	outline: none;
+}
+#save:focus,
+#save:hover {
+	opacity: 0.9;
+}
+#roomList {
+	list-style: none;
+	padding: 0;
+	margin: 3px;
+	border-bottom:solid 1px #ccc;
+}
+
+#roomList li {
+	border: solid 1px #ccc;
+	border-bottom: none;
+	padding: 4px 4px 4px 30px;
+	font-size: 90%;
+}
+
+#roomList li input[type=checkbox] {
+	display: none;
+}
+
+#roomList li:hover {
+	background-color: #cbe2be;
+}
+
+#roomList li.active {
+	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAMAAABFjsb+AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAB6VBMVEUAAABAYwFHbAZBZAZDZwc/YgFBZAVEaAT///8ZNwA/YwFDZwXO/3BAYwRGaghJbQdGagdIbAdghiFFaQYxVABnjx1BZABVexZFaQU3WQBXfRJGagZCZgJNcg07XgBOcwtGagU3WwAAAAAAAAAtTABljSZokCk4WQArTQBjiiSMuFCPu1NmjicyVAAlRQBgiCGHskuJtE1jiiQ6XQAuTwBehR+CrUZ4oDxNcg49XwFYfxhSeBIpSQBcgxx9p0B9pUNhhyRFaQU2WABbght4ozlumC5Ocw4wUgBZgBl3oTl3nzxdgyA+YQA9YABZgBhznTRpkilOcw4gPwBXfhZxnDNxmTZagB09YABQdRFqkixljSVWfBRslSxrky9XfRk/YgBOcw9fhSFqkipljChUehY/YgFLcAxZfxtfhSFSdxNAZAFJbgpVexZagBtPdBBBZAJIbQhQdhFUehVNcg1CZgJHawdNcg1QdRBKbwpCZgNGagZKbwpMcQxJbQlDZwNGagZHawZEaAWUv12PuVeNt1WJs1CHsE6HsU+CrEiAqUeBqkd7pUB6pT55oj90nDhymjZymjdznTZ0nDdqkS1rki5rki9slC5slC9jiSVkiyZkiydkiiZcgx5dhB9WfBdXfRhRdxFSeBL///94wMTnAAAAgnRSTlMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQIIbnkNCHr1+ocLB3n094MLB3j07EELVjMHd/P7lhILhPnWPgd39PuWEQ2F99ZABnbz+5YRa/bUk/H7lhE3zv37lhE3z/uWETbP+pUQNs77lRA1zfqVEDXN/JUQMGYRkDBHvQAAAAFiS0dECIbelXoAAADrSURBVBjTY2AgCJSU0UUYVVTV1JlQhJg1NLW0dXRZkIRY9fQNmpoMjYwRQmwmpmbNLS3N5hYMDOyWVtYcnAxcNrZ2rW1t7fYOjgzcTs4urm48vO4enh2dnV1e3j58DL5+/t09AYFBwSHdvb29oWHh/AwMEZF9/RMmRkXHTJowYUJsXLwA0OiExMlTpkydljR9ypQpySmpgiDrhNLSZ8ycOXPW7JkzMzKzhMFOEBHNzpkzFwRy8/JhfhATLyicN3/+/KLiEgm4YyWlSssWLCyvqJRG8pSMbFV1TW2dBIrn5eTrGxoVFAkHJSoAAFVGQV8cZMD2AAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDEzLTExLTIzVDIyOjU5OjA5KzA5OjAw6JCRkwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxMy0xMS0yM1QyMjo1ODo1NSswOTowMPlPJgEAAAAASUVORK5CYII=");
+	background-position: 5px 3px;
+	background-repeat: no-repeat;
+}
+	</style>
+
+</head>
+<body>
+	<p class="desc">
+		Select enable decktop notification thread:
+		<button id="save">save</button>
+	</p>
+	<ul id="roomList"></ul>
+	<script src="popup.js"></script>
+</body>

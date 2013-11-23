@@ -1,0 +1,28 @@
+{
+	"manifest_version": 2,
+	"version": "0.2",
+	"name": "ChatworkNotificationSelector",
+	"description": "Chatwork Desktop notification selector extension",
+	"icons": {
+		"48": "icon48.png",
+		"128": "icon128.png"
+	},
+	"permissions": [
+		"tabs", "https://www.chatwork.com/*"
+	],
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"page_action": {
+		"default_icon": "icon_default.png",
+		"default_title": "ChatworkNotificationSelector",
+		"default_popup": "popup.html"
+	},
+	"content_scripts": [
+		{
+			"matches": ["https://www.chatwork.com/*"],
+			"js": ["ChatworkNotificationSelector.js"],
+			"run_at": "document_idle"
+		}
+	]
+}
