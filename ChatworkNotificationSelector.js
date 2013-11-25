@@ -18,7 +18,7 @@ function ChatworkNotificationSelectorInit() {
         }
 
         acceptList = JSON.parse(extensionData);
-        if ( acceptList.threads.indexOf(title) === -1 ) {
+        if ( acceptList.threads.indexOf(title) !== -1 ) {
             return webkitNotifications.createNotification(icon, title, body);
         } else {
             return { show: function() {}, close: function() {} };
